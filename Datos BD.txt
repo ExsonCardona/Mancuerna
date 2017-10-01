@@ -1,0 +1,44 @@
+     <form>
+
+  <div class="row ">
+     
+       <div class="col-md-5 mb-3">
+      <label for="validationServer01">Usuario</label>
+      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Usuario"  required>
+    </div>
+  </div>
+   <div class="col-md-5 mb-3">
+      <label for="validationServer01">Usuario</label>
+      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Usuario"  required>
+    </div>
+     <div class="col-md-5 mb-3">
+      <label for="validationServer01">Usuario</label>
+      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Usuario"  required>
+    </div>
+     <div class="col-md-5 mb-3">
+      <label for="validationServer01">Usuario</label>
+      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Usuario"  required>
+    </div>
+     <div class="col-md-5 mb-3">
+      <label for="validationServer01">Usuario</label>
+      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Usuario"  required>
+    </div>
+     <div class="col-md-5 mb-3">
+      <label for="validationServer01">Usuario</label>
+      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Usuario"  required>
+    </div>
+   <div class=" row justify-content-md-center">
+<button class="btn btn-dark" type="submit" href="portal.php">Iniciar Sesión</button>
+<a href="portal.php">aqui</a>
+  </div>
+</form>
+
+
+
+
+
+
+
+Base Datos: Mancuerna
+Usuario: exson
+Contraseña: Mancuerna*01

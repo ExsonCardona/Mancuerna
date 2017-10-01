@@ -1,71 +1,60 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Mancuerna</title>
-<link rel="shortcut icon" href="images/P.ICO"/>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!DOCTYPE html>
+<html lang="en">
+<link rel="shortcut icon" href="imagen/favicon.ico"/>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-<!-- Custom Theme files -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!----webfonts---->
-<link href='http://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
-</head>
-
-<body >
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+  <body>
 
 
-      <div id="home" class="header">
-        <div class="container">
-           <nav class="top-nav">
-              <ul class="top-nav"> 
-                  <a><img src="Imagen/Logo-website.png"  /></a>
-                        
-                </ul>       
-            </nav>
-        </div>
-      </div>
-     
-<br>
-<br>
-<br>
-<br>
-<br>
-<form id="form1" action = "validar.php" method="POST" class="form-horizontal" >
-   <fieldset>
-     <legend align="center" >     Iniciar Sesión</legend>
-      <div class="form-group">
-         <label class="col-lg-6 control-label">Usuario</label>
-         <div class="col-lg-2">
-         <input  name="usuario" type="text" class="form-control"  placeholder="Usuario">
-     </div>
-     </div>
+  <div class="container-fluid"> <!-- container-fluid es para un contenedor con el ancho completo -->
+      <br>
+      <nav class="navbar sticky-top navbar-light bg-light" style="background-color: #111B3E;"> <!--Color banner--> 
+        <a><img src="imagen/Logo-website.png"  /></a> <!--Insercion logo de mancuerna-->
+      </nav>
 
-     <div class="form-group">
-         <label class="col-lg-6 control-label">Contraseña</label>
-         <div class="col-lg-2">
-         <input name="contra" type="password" class="form-control"  placeholder="Contraseña">
-     </div>
-     </div>
- 
+      <br><br><br><br>
+      <!-- Formulario de ingreso -->
+    <div class="col ">
+       <form action="validar.php" method="post">
 
-     <div class="form-group">
-            <div class="col-lg-0 col-lg-offset-7">
-            <button name="login" type="submit" value="login" class="btn btn-primary">Ingresar</button>
-            </div>
+  <div class="row justify-content-md-center">
+      <div class="col-md-3 mb-3">
+      <label for="validationServer01">Usuario</label>
+      <input name="usuario" type="text" class="form-control is-valid" id="validationServer01" placeholder="Usuario"  required>
     </div>
-       </div>
-    
-      </fieldset>
-    </form>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="col-md-3 mb-3">
+      <label for="validationServer03">Contraseña</label>
+      <input name="pass" type="password" class="form-control is-invalid" id="validationServer03" placeholder="Contraseña" required>
+      <div class="invalid-feedback">
+        
+      </div>
+    </div>
+  </div>
+   <div class=" row justify-content-md-center">
+<button class="btn btn-dark" type="submit"> Iniciar Sesión</button>
+  </div>
+</form>
+    </div>
+     <!-- Fin Formulario de ingreso -->
 
+</div>
 
-</body>
+     
+
+   
+   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
-
