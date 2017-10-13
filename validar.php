@@ -1,12 +1,8 @@
 
 <?php
-//include("connect_db.php");
-
-//$miconexion = new connect_db;
-
 
 session_start();
-	require("conexion.php");
+	require("conexion2.php");
 
 	$username=$_POST['usuario'];
 	$pass=$_POST['pass'];
@@ -19,13 +15,11 @@ session_start();
 			echo "<script>location='portal.php'</script>";
 		}else{
 			echo '<script>alert("CONTRASEÑA INCORRECTA")</script> ';
-		
 			echo "<script>location.href='index.php'</script>";
 		}
 	}else{
 		
 		echo '<script>alert("Este usuario no existe, debe registrarse")</script> ';
-		
 		echo "<script>location.href='index.php'</script>";	
 
 	}
