@@ -48,6 +48,7 @@ if (@!$_SESSION['user']) {
    <li class="nav-item">
     <a class="nav-link" id="profile-tab" data-toggle="tab" href="Desconectar.php" role="tab" aria-controls="profile" img src="/open-iconic/svg/icon-name.svg" alt="icon name">Cerrar Sesión</a>
   </li>
+  
 </ul>
 <!---------------------Programacion---------------------------------------------------------------->
 <br><br><br>

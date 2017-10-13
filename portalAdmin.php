@@ -59,6 +59,29 @@ if (@!$_SESSION['user']) {
 </ul>
 
 
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="imagen/paisaje.jpg" alt="First slide">
+      <h3>Misión </n></h3>
+      <br>
+    <p>
+    MANCUERNA, es una mancomunidad que promueve la gestión integrada del recurso hídrico, a través del fortalecimiento</p>
+    
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="imagen/rio.jpg" alt="Second slide">
+        <h3>Visión</h3>
+      <br>
+    <p>Los Municipios de MANCUERNA para el año 2020 han generado el restablecimiento de la Gobernabilidad del agua a través</p>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="imagen/acatenango.jpg" alt="Third slide">
+    </div>
+  </div>
+</div>
+
+
  <?php 
 /* Cerrar la conexión */
 mysql_close($conexion); 
