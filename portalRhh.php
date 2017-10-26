@@ -58,7 +58,6 @@ if (@!$_SESSION['user']) {
   <div class="col-md-2">
         <button id="bexpediente" type="button" class="btn btn-outline-dark active">Datos Personales</button>
       </div>
-
      <!--Primer Bloque-->
     <div class="col-lg-3">
        <input name="nom1" type="text" class="form-control is-valid" id="validationServer01" placeholder="Primer Nombre "  required>
@@ -96,18 +95,20 @@ if (@!$_SESSION['user']) {
 
     <!--Tercer Bloque-->
     <div class="col-lg-3">
-      <input name="direccion" type="text" class="form-control is-valid" id="validationServer01" placeholder="Dirección"  required><br>
-
-      <input name="tel1" type="text" class="form-control is-valid" id="validationServer01" placeholder="Telefono de Casa"  required><br>
-
-      <input name="tel2" type="text" class="form-control is-valid" id="validationServer01" placeholder="Telefono Celular"  required><br>
-
-      <input name="licencia" type="text" class="form-control is-valid" id="validationServer01" placeholder="Licencia de Conducir"  required><br>
-
+      <input name="direccion" type="text" class="form-control is-valid" id="validationServer01" placeholder="Dirección"  required>
+   
+    <br>
+      <input name="tel1" type="text" class="form-control is-valid" id="validationServer01" placeholder="Telefono Residencial"  required>
+      <br>
+      <input name="tel2" type="text" class="form-control is-valid" id="validationServer01" placeholder="Telefono Celular"  required>
+      <br>
+      <input name="licencia" type="text" class="form-control is-valid" id="validationServer01" placeholder="Licencia de Conducir"  required>
+       <br> <br> <br>
       <ul class="nav nav-tabs" id="myTab" role="tablist" >
-      <button  type="submit" class="btn btn-outline-primary">Siguiente</button>
+
+      <button  type="submit" class="btn btn-outline-primary" onclick="guardarE.php">Siguiente</button>
       <button  type="reset" class="btn btn-outline-primary">Cancelar <span class="glyphicon glyphicon-search"></span></button>    
-      </ul>     
+</ul>     
  </div>
   </div>
   </div>
@@ -116,6 +117,7 @@ if (@!$_SESSION['user']) {
 <!---------------------->
 
 <!--Datos del conyugue-->
+
 
   <div class="row" id="vconyuge">
   <div class="col-md-2">

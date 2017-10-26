@@ -18,10 +18,10 @@ $vtel1=$_POST['tel1'];
 $vtel1=$_POST['tel1'];
 
 
- $con = mysqli_connect('localhost','root','','mydb');
+ $con = mysqli_connect('localhost','root','','mancuerna');
 
-$query= "INSERT INTO empleado (cui, primernom, segnom, primape, segape, sex, email, igss, estadocivil, nacimiento, lugarnac, direccion, licencia) 
-	VALUES('$vdpi','$vnom1','$vnom2','$vap1','$vap2','vsex','$vemail','$vcivil','$vigss','$vnac','$vlugar','$vdirec','$vlicencia')";
+$query= "INSERT INTO empleado (cui, primernom, segnom, primape, segape, sex, email, igss, estadocivil, nacimiento, lugarnac, direccion, licencia, telefono_idtelefono) 
+	VALUES('$vdpi','$vnom1','$vnom2','$vap1','$vap2','vsex','$vemail','$vcivil','$vigss','$vnac','$vlugar','$vdirec','$vlicencia','1')";
 
 
 
