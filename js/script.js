@@ -15,6 +15,7 @@ function Iniciar()
 
 
 
+
 	$varDatosPersonales.show();
 	$varConyuge.hide();	
 	$varProfesion.hide();
@@ -36,6 +37,7 @@ function Iniciar()
 	$('#btraslado').on('click',traslado1);
 	$('#bbaja').on('click',bajabienes1);
 	$('#bcon').on('click',conyuge2);
+
 	
 }
 function bajabienes1(){
@@ -125,6 +127,4 @@ function expediente1()
 	$varExpediente.show();
 
 }
-
-
 

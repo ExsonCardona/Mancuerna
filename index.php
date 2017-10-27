@@ -26,13 +26,13 @@
   <div class="row justify-content-md-center">
       <div class="col-md-3 mb-3">
       <label for="validationServer01">Usuario</label>
-      <input name="usuario" type="text" class="form-control is-valid" id="validationServer01" placeholder="Usuario"  required>
+      <input name="user" type="text" class="form-control is-valid" id="validationServer01" placeholder="Usuario"  required>
     </div>
   </div>
   <div class="row justify-content-md-center">
     <div class="col-md-3 mb-3">
       <label for="validationServer03">Contraseña</label>
-      <input name="pass" type="password" class="form-control is-invalid" id="validationServer03" placeholder="Contraseña" required>
+      <input name="password" type="password" class="form-control is-invalid" id="validationServer03" placeholder="Contraseña" required>
       <div class="invalid-feedback">
         
       </div>

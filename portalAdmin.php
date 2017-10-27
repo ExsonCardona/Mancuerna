@@ -14,6 +14,7 @@ if (@!$_SESSION['user']) {
 <html lang="en">
 <link rel="shortcut icon" href="imagen/favicon.ico"/>
   <head>
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,6 +25,9 @@ if (@!$_SESSION['user']) {
    <link rel="stylesheet" type="text/css" href="css/estilos.css">
 <link rel="stylesheet" type="text/css" href="css/diseño.css">
   </head>
+
+<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="js/scripts.js"></script>
   <body>
 
 
@@ -38,19 +42,14 @@ if (@!$_SESSION['user']) {
     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-expanded="true">Activo<strong><?php echo $_SESSION['user'];?></strong></a> </a>
   </li>   
   <li class="nav-item">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Reportes</a>
+    <a class="nav-link" id="breportes" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Reportes</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Contratos</a>
+    <a class="nav-link" id="bcontratos" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Contratos</a>
   </li>
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-      Invenatrio
+    <a class="nav-link" id="binventario" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"> Inventario
     </a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" id="dropdown1-tab" href="#dropdown1" role="tab" data-toggle="tab" aria-controls="dropdown1">Exson</a>
-      <a class="dropdown-item" id="dropdown2-tab" href="#dropdown2" role="tab" data-toggle="tab" aria-controls="dropdown2">Preuba</a>
-    </div>
 
   </li>
    <li class="nav-item">
@@ -59,7 +58,7 @@ if (@!$_SESSION['user']) {
 </ul>
 
 
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+<!--<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img class="d-block w-100" src="imagen/paisaje.jpg" alt="First slide">
@@ -67,24 +66,67 @@ if (@!$_SESSION['user']) {
       <br>
     <p>
     MANCUERNA, es una mancomunidad que promueve la gestión integrada del recurso hídrico, a través del fortalecimiento</p>
-    
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="imagen/rio.jpg" alt="Second slide">
-        <h3>Visión</h3>
-      <br>
-    <p>Los Municipios de MANCUERNA para el año 2020 han generado el restablecimiento de la Gobernabilidad del agua a través</p>
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="imagen/acatenango.jpg" alt="Third slide">
     </div>
   </div>
-</div>
+</div>-->
 
+
+<!---------------------Programacion---------------------------------------------------------------->
+<br><br><br>
+
+<!--primer Fragmento-->
+<form method="POST" action="guardarE.php">
+<div id="vreportes">
+<div class="row" >
+  <div class="col-md-2">
+        <button id="bexpediente" type="button" class="btn btn-outline-dark active">REPORTE1</button>
+        <br><br>
+        <button id="bexpediente" type="button" class="btn btn-outline-dark active">REPORTE2</button>
+        <br><br>
+        <button id="bexpediente" type="button" class="btn btn-outline-dark active">REPORTE2</button><br>
+      </div>
+  
+<!--HOJA DE REPORTES>-->
+
+
+
+ </div>
+  </div>
+  </div>
+   </form>
+
+<!---------------------->
+
+<!--Datos del conyugue-->
+
+  <div class="row" id="vcontratos">
+  <div class="col-md-2">
+   
+      <button type="button" class="btn btn-outline-dark active">CONTRATOS</button>
+     </div>
+
+     <!--HOJA DE CONTRATOS>-->
+   
+    
+      <br>
+ </div>
+   </div>
+
+
+   <!--Datos del Profesion-->
+
+  <div class="row" id="vinventario">
+  <div class="col-md-2">
+   
+      <button type="button" class="btn btn-outline-dark active">INVENTARIO</button>
+     </div>
+
+      <!--HOJA DE INVENTARIO>-->
+  
+ </div>
+   </div>
 
  <?php 
-/* Cerrar la conexión */
-mysql_close($conexion); 
 ?>
 
 </body>

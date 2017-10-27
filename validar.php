@@ -2,10 +2,10 @@
 <?php
 
 session_start();
-	require("conex.php");
+	require("conexion.php");
 
-	$username=$_POST['usuario'];
-	$pass=$_POST['pass'];
+	$username=$_POST['user'];
+	$pass=$_POST['password'];
 
 	$sql=mysqli_query($mysqli,"SELECT * FROM login WHERE user='$username' and cargo='Admin'");
 	if($f2=mysqli_fetch_assoc($sql)){
@@ -29,7 +29,7 @@ session_start();
 
 	$sql27=mysqli_query($mysqli,"SELECT * FROM login WHERE user='$username' and cargo='Recursos'");
 	if($f2=mysqli_fetch_assoc($sql27)){
-		if($pass==$f2['pasword']){
+		if($pass==$f2['password']){
 			$_SESSION['id']=$f2['id'];
 			$_SESSION['user']=$f2['user'];
 			echo "<script>location='portalRhh.php'</script>";
