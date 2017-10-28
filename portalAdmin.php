@@ -7,7 +7,9 @@ if (@!$_SESSION['user']) {
 }
     require("conex.php");
 ?>
-
+<?php
+require("conexionReport.php");
+?>
 
 
 <!DOCTYPE html>
@@ -79,7 +81,7 @@ if (@!$_SESSION['user']) {
 <div id="vreportes">
 <div class="row" >
   <div class="col-md-2">
-        <button id="bexpediente" type="button" class="btn btn-outline-dark active">REPORTE1</button>
+        <button id="bexpediente" type="button" class="btn btn-outline-dark active">Reporte Empleados</button>
         <br><br>
         <button id="bexpediente" type="button" class="btn btn-outline-dark active">REPORTE2</button>
         <br><br>
@@ -88,6 +90,42 @@ if (@!$_SESSION['user']) {
   
 <!--HOJA DE REPORTES>-->
 
+  <div class="widget-content ">
+  <table class="table-bordered full-width table-responsive">
+    <thead>
+      <tr>
+        <th>CODIGO</th>
+        <th>NOMBRES</th>
+        <th>APELLIDOS</th>
+        <th>CARGO</th>
+      </tr>
+    </thead>
+      <tbody>
+<?php
+        $con = new DB;
+          $cali = $con->conectar();
+               $ingreso = $con->conectar();
+                  $strConsulta = "SELECT cui,e.primernom as Pnombre,e.segnom as Snombre,e.primape as Papellido,e.segape as Sapellido,cargo from login inner join empleado e on e.cui=Empleado_cui";
+                       $ingreso = mysql_query($strConsulta);
+                       $numfilas = mysql_num_rows($ingreso);
+                       for ($i=0; $i<$numfilas; $i++)     {
+                       $fila = mysql_fetch_array($ingreso);
+?>
+<tr>
+    <td><?php echo $fila['cui']?></td>
+      <td><?php echo $fila['Pnombre'].' '.$fila['Snombre']?></td>
+      <td><?php echo $fila['Papellido'].' '.$fila['Sapellido']?></td>
+      <td><?php echo $fila['cargo'] ?></td>
+</tr>
+<?php } ?>
+          </tbody>
+  </table>
+
+
+
+<br>
+  <a href="PDFempleados.php" class="btn btn-success">Imprimir</a>
+</div>
 
 
  </div>
