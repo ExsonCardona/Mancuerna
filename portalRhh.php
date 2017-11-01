@@ -9,7 +9,6 @@ if (@!$_SESSION['user']) {
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <link rel="shortcut icon" href="imagen/favicon.ico"/>
@@ -40,8 +39,8 @@ if (@!$_SESSION['user']) {
 
 <ul class="nav nav-tabs" id="myTab" role="tablist" >
       <li class="nav-item">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-expanded="true">Activo<strong><?php echo $_SESSION['user'];?></strong></a> </a>
-  </li>   
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-expanded="true">Activo <strong><?php echo $_SESSION['user'];?></strong> </a> 
+  </li>  
    <li class="nav-item">
     <a class="nav-link" id="profile-tab" data-toggle="tab" href="Desconectar.php" role="tab" aria-controls="profile" img src="/open-iconic/svg/icon-name.svg" alt="icon name">Cerrar Sesión</a>
   </li>  
@@ -51,139 +50,193 @@ if (@!$_SESSION['user']) {
 <!---------------------Programacion---------------------------------------------------------------->
 <br><br><br>
 
-<!--primer Fragmento-->
-<form method="POST" action="guardarE.php">
-<div id="vempleado">
-<div class="row" >
-  <div class="col-md-2">
-        <button id="bexpediente" type="button" class="btn btn-outline-dark active">Datos Personales</button>
+
+<form  method="POST" class="form-horizontal">
+  <fieldset>
+    <div class="container" id="vempleado">
+
+      <!-- Primer Bloque -->
+      <div class="row">
+    <div class="card" style="width: 15rem;">
+  <img class="card-img-top" src="imagen/user.png" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text" align="center">Registro Empleados</p>
+  </div>
+</div>
+        <div class="col" >
+        <div class="form-group" type="submit">
+          <input type="text" class="form-control is-valid" id="validationServer01" required="required"  name="dpi" placeholder="Codigo unico identificacion" required>
+        </div> 
+         <div class="form-group" >
+          <input type="text" class="form-control is-valid" id="validationServer01" required="required" name="nom1" placeholder="Primer Nombre" required>
+        </div>
+         <div class="form-group">
+          <input type="text" class="form-control is-valid" id="validationServer01"  name="nom2" placeholder="Segundo Nombre" required>
+        </div> 
+         <div class="form-group" >
+          <input type="text" class="form-control is-valid" id="validationServer01"  name="ap1" placeholder="Primer Apellido" required>
+        </div>
+         <div class="form-group" >
+          <input type="text" class="form-control is-valid" id="validationServer01"  name="ap2" placeholder="Segundo Apellido" required>
+        </div>  
       </div>
-     <!--Primer Bloque-->
-    <div class="col-lg-3">
-       <input name="nom1" type="text" class="form-control is-valid" id="validationServer01" placeholder="Primer Nombre "  required>
-      <br>
-      <input name="nom2" type="text" class="form-control is-valid" id="validationServer01" placeholder="Segundo NOmbre"  required>
-      <br>
-       <input name="ap1" type="text" class="form-control is-valid" id="validationServer01" placeholder="Primer Apellido"  required>
-       <br>
-        <input name="ap2" type="text" class="form-control is-valid" id="validationServer01" placeholder="Segundo Apellido"  required>
-        <br>
-        <input name="dpi" type="text" class="form-control is-valid" id="validationServer01" placeholder="DPI CUI"  required>
-        <br>
-      <input name="sex" type="text" class="form-control is-valid" id="validationServer01" placeholder="Sexo"  required>
+ 
+ 
     
+    <!--SEgundo Bloque-->
+ <div class="col order-12">
+  <div class="form-group">
+          <select type="text" class="form-control is-valid" id="validationServer01"  name="sex" class="form-group" required>>
+            <option>Sexo</option>
+            <option>Masculino</option>
+            <option>Femenino</option>
+          </select> 
+        </div> 
+  <div class="form-group">
+          <select type="text" class="form-control is-valid" id="validationServer01"  name="estadocivil" class="form-group" required>
+            <option>Estado Civil</option>
+            <option>Soltero</option>
+            <option>Casado</option>
+          </select> 
+        </div>  
+        <div class="form-group">
+          <input type="text" class="form-control is-valid" id="validationServer01"  name="email" placeholder="Correo Electronico" required>
+        </div> 
+         <div class="form-group">
+          <input class="form-control" type="text" name="igss" placeholder="Número Afilicion IGSS" required>
+        </div>
+
+  </div>
+
+      <!--Tercer Bloque-->
+      <div class="col order-1">
+         <div class="form-group">
+          <label>Fecha Nacimiento</label>
+          <input  class="form-control is-valid" id="validationServer01"  type="date" name="nacimiento" placeholder="Fecha" required>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control is-valid" id="validationServer01"  name="direccion" placeholder="Domicilio" required>
+        </div> 
+         <div class="form-group">
+          <input type="text" class="form-control is-valid" id="validationServer01"  name="tel1" placeholder="Numero Telefono" required>
+        </div>
+         <div class="form-group">
+          <input type="text" class="form-control is-valid" name="licencia" placeholder="Numero de Licencia" required>
+        </div>
+         <div class="form-group">
+          <button  id="bempleado" class="btn btn btn-success">siguiente</button> 
+          </div> 
        
+      </div>
+    </div>
     </div>
 
-    <!--Segundo Bloque-->
-    <div class="col-lg-3">
 
-      <input name="estadocivil" type="text" class="form-control is-valid" id="validationServer01" placeholder="Estado Civil"  required>
-      <br>
-     
-      <input name="email" type="text" class="form-control is-valid" id="validationServer01" placeholder="Correo Electronico"  required>
-      <br>
-      <input name="igss" type="text" class="form-control is-valid" id="validationServer01" placeholder="Afiliación IGSS"  required>
-    
-    <br>
-      <label> Fecha de Nacimiento </label>
-      <input name="nacimiento" type="date" class="form-control is-valid" id="validationServer01" placeholder="Fecha Nacimiento"  required>
-      <br>
-      <input name="lugar" type="text" class="form-control is-valid" id="validationServer01" placeholder="Lugar de Nacimiento"  required>
-     
-</div>
 
-    <!--Tercer Bloque-->
-    <div class="col-lg-3">
-      <input name="direccion" type="text" class="form-control is-valid" id="validationServer01" placeholder="Dirección"  required>
-   
-    <br>
-      <input name="tel1" type="text" class="form-control is-valid" id="validationServer01" placeholder="Telefono Residencial"  required>
-      <br>
-      <input name="tel2" type="text" class="form-control is-valid" id="validationServer01" placeholder="Telefono Celular"  required>
-      <br>
-      <input name="licencia" type="text" class="form-control is-valid" id="validationServer01" placeholder="Licencia de Conducir"  required>
-       <br> <br> <br>
-      <ul class="nav nav-tabs" id="myTab" role="tablist" >
+  </fieldset>
+</form>
 
-      <button  type="submit" class="btn btn-outline-primary" onclick="guardarE.php">Siguiente</button>
-      <button  type="reset" class="btn btn-outline-primary">Cancelar <span class="glyphicon glyphicon-search"></span></button>    
-</ul>     
- </div>
-  </div>
-  </div>
-   </form>
 
 <!---------------------->
 
 <!--Datos del conyugue-->
 
-
-  <div class="row" id="vconyuge">
-  <div class="col-md-2">
-   
-      <button type="button" class="btn btn-outline-dark active">Datos Conyuge</button>
-     </div>
-     <!--Primer Bloque-->
-    <div class="col-lg-3">
-       <input name="nomc" type="text" class="form-control is-valid" id="validationServer01" placeholder="Nombre de Conyuge "  required><br>
-      <input name="numh" type="text" class="form-control is-valid" id="validationServer01" placeholder="Numero de Hijos"  required>
-     
-       
-    </div>
-
-    <!--Segundo Bloque-->
-    <div class="col-lg-3">
-     <label>Fecha Nacimiento</label>
-      <input name="fechan" type="date" class="form-control is-valid" id="validationServer01" placeholder="Fecha de Nacimiento"  required>
-      <br>
-      <input name="nomh" type="text" class="form-control is-valid" id="validationServer01" placeholder="Nombre de Hijos"  required>
- 
-     
+<form action="portalRhh.php" method="POST" class="form-horizontal">
+  <fieldset>
+    <div class="container" id="vconyuge">
+      <div class="row">
+  <div class="card" style="width: 15rem;">
+    <div class="card-body">
+    <p class="card-text">DPI: <?php echo $_POST['dpi'];?></p>
+  </div>
+  <img class="card-img-top" src="imagen/user.png" alt="Card image cap">
+  
 </div>
 
-    <!--Tercer Bloque-->
-    <div class="col-lg-3">
-      <input name="sexo" type="text" class="form-control is-valid" id="validationServer01" placeholder="Sexo"  required>
-   
-    
-      <br>
- </div>
-   </div>
+        <div class="col-sm-3">
+         <div class="form-group">
+          <input name="numh" type="text" class="form-control is-valid" id="validationServer01" placeholder="<?php echo $_POST['dpi'];?>"  required>
+        </div>
+        <div class="form-group">
+        <input name="numh" type="text" class="form-control is-valid" id="validationServer01" placeholder="Numero de Hijos"  required>
+        </div>
+         <div class="form-group">
+          <input name="numh" type="text" class="form-control is-valid" id="validationServer01" placeholder="Numero de Hijos"  required>
+        </div>
+        <div class="form-group">
+        <input name="numh" type="text" class="form-control is-valid" id="validationServer01" placeholder="Numero de Hijos"  required>
+        </div>
+         <div class="form-group">
+          <button id="bprofesion" class="btn btn btn-success">siguiente</button>
+        </div> 
+      </div> 
+<!--Segundo Bloque-->
+      <div class="col-sm-5">   
+ <?php 
+require("eliminar.php");
+/* Mostrar la tabla con los registros */
+echo $table; 
+
+?>
+
+
+ <?php 
+/* Cerrar la conexión */
+mysql_close($conexion); 
+?>
+
+    </div>
+  </div>
+  </fieldset>
+</form>
+
+
 
 
    <!--Datos del Profesion-->
 
-  <div class="row" id="vprofesion">
-  <div class="col-md-2">
-   
-      <button type="button" class="btn btn-outline-dark active">Profesión</button>
-     </div>
-
-     <!--Primer Bloque-->
-    <div class="col-lg-3">
-       <input name="profesion" type="text" class="form-control is-valid" id="validationServer01" placeholder="Profesión"  required>
-      <br>
-      <input name="oe" type="text" class="form-control is-valid" id="validationServer01" placeholder="Otros Estudios"  required>
+  <form>
+    <fieldset>
+      <div class="container" id="vprofesion">
+        <div class="row">
+           <div class="card" style="width: 15rem;">
+               <p class="card-text">DPI: <?php echo $_POST['dpi'];?></p>
      
-       
-    </div>
-
-    <!--Segundo Bloque-->
-    <div class="col-lg-3">
+            <img class="card-img-top" src="imagen/profesion.jpg" alt="Card image cap">
+             <div class="card-body">
+           
+        </div>
+      </div>
+        <div class="col-sm-3">
+           <div class="form-group">
+            <input name="profesion" type="text" class="form-control is-valid" id="validationServer01" placeholder="Profesión"  required>
+         
+        </div>
+        <div class="form-group">
+          <input name="oe" type="text" class="form-control is-valid" id="validationServer01" placeholder="Otros Estudios"  required>
+        </div>
+        <div class="form-group">
+         <input name="ea" type="text" class="form-control is-valid" id="validationServer01" placeholder="Estudia Actualmente"  required>
+        </div>
+         <div class="form-group">
+         <input name="oe" type="text" class="form-control is-valid" id="validationServer01" placeholder="Otros Estudios"  required>
      
-      <input name="ea" type="text" class="form-control is-valid" id="validationServer01" placeholder="Estudia Actualmente"  required>
-      
- 
-     
-</div>
-
-    <!--Tercer Bloque-->
-    <div class="col-lg-3">
-      <input name="descripcion" type="text" class="form-control is-valid" id="validationServer01" placeholder="Descripción"  required>
+        </div>
+        <div class="form-group">
+          <input name="descripcion" type="text" class="form-control is-valid" id="validationServer01" placeholder="Descripción"  required>
   
- </div>
-   </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn btn-success">Guardar</button>
+        </div> 
+        <div class="form-group">
+          <button id="bcontrato" class="btn btn-outline-warning">Siguiente</button>
+        </div> 
+        </div>         
+        </div>
+      </div>
+    </fieldset>
+  </form>
 
 
    <!--Datos del contrato-->
@@ -256,15 +309,39 @@ if (@!$_SESSION['user']) {
       </div>
       </div>
       <br><br>
-
-
-
- <?php 
-
-?>
-
+  
 </body>
+ 
+
 </html>
+  <div class="container">
+<nav class="navbar sticky-top navbar-light bg-light" style="background-color: #e3f2fd;">
+  <!-- Navbar content -->
+   <ul class="nav justify-content-end">
+      <ul class="nav nav-tabs">
+   <li class="nav-item">
+
+    <a class="nav-link active" id="bempleado" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Datos Personales</a>
+  </li>
+  <li class="nav-item">
+    
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="bprofesion" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Profesion</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="bcontrato" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Datos del Contrato</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link" id="bexpediente" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Datos Expediente</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="bconyuge" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Conyuge</a>
+  </li> 
+</ul>
+</ul>
+</nav>
+</div>
 
 
 
