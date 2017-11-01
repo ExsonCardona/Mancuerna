@@ -1,5 +1,6 @@
 <?php 
 
+<<<<<<< HEAD
 
 define('DB_SERVER', '188.121.43.95');
 define('DB_NAME', 'mancuerna');
@@ -8,6 +9,15 @@ define('DB_PASS', 'Mancuerna*01');
 
 try {
   $mbd = new PDO('mysql:host=188.121.43.95;dbname=mancuerna', 'exson', 'Mancuerna*01',
+=======
+define('DB_SERVER', 'localhost');
+define('DB_NAME', 'mancuerna');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+
+try {
+  $mbd = new PDO('mysql:host=localhost;dbname=mancuerna', 'root', '',
+>>>>>>> origin/master
       array(PDO::ATTR_PERSISTENT => true));
 
   } catch (Exception $e) {
@@ -31,5 +41,9 @@ $mysqli = new mysqli(DB_SERVER,DB_USER,DB_PASS,DB_NAME); //servidor, usuario de 
 	}
 
 
+<<<<<<< HEAD
 ?>
 
+=======
+?>
+>>>>>>> origin/master

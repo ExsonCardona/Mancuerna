@@ -2,10 +2,10 @@
 <?php
 
 session_start();
-	require("conex.php");
+	require("conexion.php");
 
-	$username=$_POST['usuario'];
-	$pass=$_POST['pass'];
+	$username=$_POST['user'];
+	$pass=$_POST['password'];
 
 	$sql=mysqli_query($mysqli,"SELECT * FROM login WHERE user='$username' and cargo='Admin'");
 	if($f2=mysqli_fetch_assoc($sql)){
